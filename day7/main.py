@@ -1,4 +1,3 @@
-import pandas as pd
 import re
 
 f = open('day7/input.txt', 'r')
@@ -23,7 +22,6 @@ print(f"Bag colors that can contain at least one shiny gold : {len(get_contains_
 # Answer to Q2
 def get_number_of_bags_to_contain(color, contain_dict):
     count = 0
-    #bags = list(df.columns[pd.notna(df.loc[color])])
     bags = list(contain_dict[color].keys())
     for bag in bags:
         if bag in contain_dict.keys():
